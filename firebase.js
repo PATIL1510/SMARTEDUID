@@ -1,11 +1,19 @@
-// YOUR CONFIG HERE
+// firebase.js
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
+
 const firebaseConfig = {
-    apiKey: "YOUR_KEY",
-    authDomain: "YOUR_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
+    apiKey: "AIzaSyAn4QIOCSnCF_-Tm27PTpO_FVhrFOTasio",
+    authDomain: "smarteduid-caeeb.firebaseapp.com",
+    projectId: "smarteduid-caeeb",
+    storageBucket: "smarteduid-caeeb.firebasestorage.app",
+    messagingSenderId: "39611174945",
+    appId: "1:39611174945:web:a601c455d02d54e0ca1360"
 };
 
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-const auth = firebase.auth();
-const db = firebase.firestore();
+export const auth = getAuth(app);
+export const db = getFirestore(app);
